@@ -1,0 +1,8 @@
+To use the example of python interface for C:
+1. Create a shared library from the read_data.c file using:
+    $ gcc -shared read_data.c -fPIC -o libread.so
+This will create a libread.so file.
+2. Open pyread.py and change the libpath variable to point to the libread.so library you just created.
+3. Run 
+    $ python pyread.py
+This should print a numpy array with 100*4032 elements
